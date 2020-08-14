@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" /> 
+    <title>Search Redirect</title>
+</head>
+<body>
+    <h1>Please Wait....Redirecting</h1>
+    <script>
+        (
+            () => {
+                const pickupDate = new Date();
+                pickupDate.setDate(pickupDate.getDate() + 1);
+                const dropoffDate = new Date();
+                dropoffDate.setDate(dropoffDate.getDate() + 7);
+                window.location.href = `https://www.rentalcars.com/search-results?cor=gb&doDay=${dropoffDate.getDate()}&doHour=10&doMinute=0&doMonth=${dropoffDate.getMonth() + 1}&doYear=${dropoffDate.getFullYear()}&driversAge=30&ftsType=A&location=37761&locationName=Gatwick%20Airport&puDay=${pickupDate.getDate()}&puHour=10&puMinute=0&puMonth=${pickupDate.getMonth() + 1}&puYear=${pickupDate.getFullYear()}`;
+            }
+        )();
+    </script>
+</body>
+</html>
